@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "da1cd8cf-76a6-4ab9-978c-067c8d6d353b",
+      "name": "Submission Desk",
+      "event": "Build With AI: Basics — first place $1,250 cash",
+      "summary": "Prepare a hackathon entry with traceable requirements, evidence and a portable handoff; keep preparation distinct from actual submission.",
+      "deadlineLocal": "2026-10-26T17:00",
+      "timeZone": "America/New_York",
+      "repo": "",
+      "video": "",
+      "copy": "",
+      "requirements": [
+        {
+          "id": "4f8a177c-5832-49ad-9fb3-b5648745502c",
+          "title": "Verify eligibility and exclusions",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        },
+        {
+          "id": "de593679-66e8-430d-a5a0-605b1a0c5123",
+          "title": "Use the required Devpost Learn Skill Pack; disclose prototype chronology",
+          "source": "https://github.com/challengepost/learn-ai-basics",
+          "done": false
+        },
+        {
+          "id": "02a2cabc-7caf-447a-af29-60cc7fa25541",
+          "title": "Include scope.md, prd.md and spec.md from the actual planning process",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        },
+        {
+          "id": "1332525a-0aa0-480d-8f8d-a8fa2c78db29",
+          "title": "Demonstrate at least one working end-to-end function",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        },
+        {
+          "id": "0f4446cc-b6c4-4cee-a673-20e1d08ee669",
+          "title": "Provide a public source repository with setup instructions",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        },
+        {
+          "id": "8cc7f097-b0d5-4800-8bde-f78e93d67221",
+          "title": "Record and publish a functioning-app demo under three minutes",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        },
+        {
+          "id": "c40265b2-d551-4db8-848b-efab04698c9c",
+          "title": "Prepare an accurate English project description",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        },
+        {
+          "id": "0c18e98a-436a-4ef7-b141-5f322d6b1b11",
+          "title": "Confirm substantial distinction from the What Changed? entry",
+          "source": "https://learn-ai-basics.devpost.com/rules",
+          "done": false
+        }
+      ],
+      "evidence": [
+        {
+          "id": "2453394d-a8ae-4ab3-88a1-ba620c6f89b9",
+          "title": "Provisional target verified",
+          "note": "Official rules checked 2026-10-15. $1,250 first prize; deadline October 26 at 5 PM Eastern. Entry eligibility, full Skill Pack compliance and real submission remain unverified. See contest/GOAL.md.",
+          "requirementId": "",
+          "file": null
+        }
+      ],
+      "submission": null
+    }
+  ]
+}

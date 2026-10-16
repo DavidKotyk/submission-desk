@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "09997c2a-92fc-4e63-90a6-892e02299cee",
+      "name": "Gapwise",
+      "event": "Fintech for Good \u2022 Demo hackathon",
+      "summary": "Turn a financial goal into a weekly plan. Gapwise helps people build a $1,000 emergency fund by comparing savings milestones with their available cash flow.",
+      "deadlineLocal": "2026-11-20T17:00",
+      "timeZone": "America/New_York",
+      "repo": "https://example.com/gapwise/repository",
+      "video": "https://example.com/gapwise/demo",
+      "copy": "Gapwise helps people work toward a financial goal: a $1,000 emergency fund. Our synthetic demo starts with $250 saved and compares weekly savings milestones. At $50 per week, the remaining $750 takes 15 weeks. Built for the fictional Fintech for Good hackathon; no bank connection or financial advice.",
+      "requirements": [
+        {
+          "id": "f4217afe-a5d4-4241-b74e-32aad0e34a8a",
+          "title": "Public repository with setup instructions",
+          "source": "https://example.com/hackathon/rules#repository",
+          "done": true
+        },
+        {
+          "id": "a54f1c8a-4396-446b-881c-11f357c81291",
+          "title": "Two-minute walkthrough video",
+          "source": "https://example.com/hackathon/rules#video",
+          "done": true
+        },
+        {
+          "id": "ad67f3d0-607b-4f6d-b482-2d6a64c7780a",
+          "title": "Explain the financial goal and savings milestones",
+          "source": "https://example.com/hackathon/rules#impact",
+          "done": true
+        }
+      ],
+      "evidence": [
+        {
+          "id": "153bb1e4-e8c6-4766-8ba4-487351425607",
+          "title": "Savings milestone scenario checked",
+          "note": "Synthetic example: $1,000 emergency-fund goal, $250 already saved, $50 weekly contribution. The remaining $750 takes 15 weeks. No real financial information.",
+          "requirementId": "",
+          "file": null
+        },
+        {
+          "id": "477a08d5-9fe8-4c3a-a0e6-4b46ec2fb38e",
+          "title": "Walkthrough duration checked",
+          "note": "Synthetic demo: 1:54 walkthrough shows the $1,000 emergency-fund goal and weekly savings milestones.",
+          "requirementId": "a54f1c8a-4396-446b-881c-11f357c81291",
+          "file": {
+            "name": "demo-evidence.txt",
+            "data": "data:application/octet-stream;base64,U1lOVEhFVElDIERFTU8gRVZJREVOQ0UKR2Fwd2lzZSB3YWxrdGhyb3VnaDogMSBtaW51dGUgNTQgc2Vjb25kcy4KU2hvd3Mgc3ludGhldGljIHNhdmluZ3MsIGEgJDEsMDAwIGVtZXJnZW5jeS1mdW5kIGdvYWwsIGFuZCB3ZWVrbHkgc2F2aW5ncyBtaWxlc3RvbmVzLgpDcmVhdGVkIGZvciB0ZXN0aW5nIFN1Ym1pc3Npb24gRGVzay4gTm8gYWN0dWFsIGV2ZW50IGVudHJ5Lgo="
+          }
+        }
+      ],
+      "submission": {
+        "link": "https://example.com/confirmation/DEMO-GAPWISE-001",
+        "receipt": "SYNTHETIC RECEIPT DEMO-GAPWISE-001. Local workflow verification only; no actual entry submitted.",
+        "recordedAt": "2026-10-16T00:24:18.911Z"
+      }
+    },
+    {
+      "id": "89de3822-5c50-4224-8a8c-a296698d0164",
+      "name": "Raincheck",
+      "event": "Civic Weekend \u2022 Demo hackathon",
+      "summary": "A second synthetic entry to demonstrate a multi-project desk.",
+      "deadlineLocal": "2026-12-05T12:00",
+      "timeZone": "Europe/London",
+      "repo": "",
+      "video": "",
+      "copy": "",
+      "requirements": [],
+      "evidence": [],
+      "submission": null
+    }
+  ]
+}
