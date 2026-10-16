@@ -2,10 +2,14 @@
   "project": "Submission Desk",
   "authorization": "User explicitly approved publishing DavidKotyk/submission-desk and the public YouTube demo and preparing the Devpost entry.",
   "repositoryUrl": "https://github.com/DavidKotyk/submission-desk",
-  "repositoryPublished": false,
-  "videoUrl": null,
-  "videoPublished": false,
+  "repositoryPublished": true,
+  "videoUrl": "https://youtu.be/SkeOZFql0xc",
+  "videoPublished": true,
   "contestSubmitted": false,
   "chronologyDisclosed": true,
-  "updatedAt": "2026-10-16T04:00:46.369057+00:00"
+  "updatedAt": "2026-10-16T04:03:11.660113+00:00",
+  "repositoryUnauthenticatedCloneVerified": true,
+  "videoStatus": "YouTube Studio confirmed Video published, Oct 16, 2026, duration 1:31.",
+  "unauthenticatedPlaybackVerified": true,
+  "videoVerification": "Incognito displayed Sign in and correct title; playback at 0:02 of 1:30."
 }

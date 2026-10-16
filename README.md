@@ -54,7 +54,7 @@ See [the recorded demo](demo/preview.html) and [walkthrough](docs/DEMO.md) and [
 
 Target: Build With AI: Basics, deadline October 26, 2026 at 5 p.m. Eastern; first prize $1,250. No prize is promised. The earlier prototype predates required Skill Pack use; planning and subsequent implementation chronology are disclosed in [WORKFLOW.md](docs/WORKFLOW.md). Required plans are under `devpost/`. The organizer determines eligibility.
 
-The user approved source/video publication and entry preparation. Current verified external status is recorded in docs/publication-status.json. What Changed? is a separate submitted entry and is not reused as this product.
+Public source: https://github.com/DavidKotyk/submission-desk . Public demo: https://youtu.be/SkeOZFql0xc . Devpost entry preparation is in progress; current verified external status is recorded in docs/publication-status.json. What Changed? is a separate submitted entry and is not reused as this product.
 
 ## Verification tooling
 

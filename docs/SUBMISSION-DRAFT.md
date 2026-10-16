@@ -21,8 +21,8 @@ Actual local browser recording shows a completed synthetic checklist still carry
 The audit checks recorded data, not real website permissions, source truth or legal eligibility. Reviews and receipts are self-reported. Browser storage is unencrypted and limited; no cloud backup or multi-tab synchronization. Next steps should start with independent builder feedback and observed usefulness, rather than claiming unmeasured time savings.
 
 ## Public links
-Repository: pending approval/publication.
-Video: pending approval/publication.
+Repository: https://github.com/DavidKotyk/submission-desk (public; unauthenticated clone verified).
+Video: https://youtu.be/SkeOZFql0xc (public; signed-out Incognito playback verified).
 
 ## Personal learning and exit survey
 User responses pending. Do not invent them or reuse answers about What Changed? without confirmation for this separate project.
