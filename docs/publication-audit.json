@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-10-16T03:59:54.894209+00:00",
+  "historyBlobsScanned": 72,
+  "findings": [],
+  "scope": "All current committed blobs; credential-pattern and private-profile checks, not a guarantee of absence. Manual intended-file inspection also performed.",
+  "publications": false
+}
