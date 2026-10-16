@@ -1,3 +1,16 @@
+# Current verification — October 15, 2026
+
+## Current increment
+- 14 domain/server tests pass on bundled Node.js 24.19.0, including exact-URL review invalidation, legacy backups, malformed review records and manual receipt independence.
+- 15 browser checks pass on installed Chrome at 1440 px desktop and 390 × 844 mobile. No page errors or external requests observed. Machine-readable evidence: docs/browser-check.json.
+- Browser workflow includes a checked checklist with placeholder blockers, rejected placeholder review, current→stale review after URL edit and refresh, literal HTML evidence, byte-identical attachment download, empty receipt rejection, separate manual receipt, JSON/Markdown downloads, multi-entry switching, backup restore and atomic invalid-import rejection.
+- Screenshots: docs/desktop-current.png and docs/mobile-current.png. Earlier screenshots and notes below document the initial prototype, not the final increment.
+- Optional QA command: `PLAYWRIGHT_MODULE=/path/to/playwright node scripts/browser-check.mjs` with the app running at http://127.0.0.1:4177; APP_URL can override.
+
+These checks establish behavior on controlled, assistant-authored fixtures. They do not establish real-user time savings, independent semantic accuracy, organizer acceptance, legal eligibility, novelty or a prize probability. See docs/LIMITATIONS.md.
+
+## Prior prototype verification (historical)
+
 # Verification — 2026-10-15
 
 ## Automated

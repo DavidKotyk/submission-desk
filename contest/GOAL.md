@@ -54,3 +54,6 @@ Browser verification: the audit exposed five blockers and three review findings 
 ## Priority clarification
 
 The user explicitly stated: “Cash prize should be number one.” This supersedes the earlier default to preserve Submission Desk. The active goal is financial reward through a competitive entry, rather than completing this particular product for its own sake. No paid APIs, charges, publication or account integration are newly authorized by this prioritization.
+
+## Current goal selected and started
+The user explicitly requested the proposed Submission Desk goal and start. Target is now Build With AI: Basics, with publication-ready preparation as the completion boundary and explicit approval before external actions. The prototype was preserved at 9eeef17; subsequent plans govern exact-URL artifact reviews added at 1c528c0. All 14 domain/server tests and 15 browser checks pass. Scope, PRD, spec and provenance are under devpost/ and docs/WORKFLOW.md. Actual local-app recording and final package verification are in progress. What Changed? remains separately submitted and unchanged.

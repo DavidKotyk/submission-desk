@@ -1,6 +1,8 @@
 # Submission Desk
 
-A local workspace for preparing hackathon entries and recording a submission receipt. The synthetic **Gapwise** entry focuses on a financial goal: building a **$1,000 emergency fund**, for the fictional Fintech for Good hackathon. All events, rules, links and confirmations are demo data. No actual submission takes place.
+A local workspace for preparing hackathon entries, auditing missing evidence, and recording what was actually submitted. A completed checklist, a reviewed artifact URL and an organizer receipt remain separate facts.
+
+The bundled Gapwise and Raincheck entries are synthetic submission packets. Submission Desk does not implement the fictional apps described inside those examples, verify their claims or send entries to an organizer.
 
 ## Run
 
@@ -25,7 +27,7 @@ Choose an entry in the sidebar or select **New entry**. Edit its name, event, de
 
 Add and edit requirements, their source links and completion state in **Requirements**. Use **Evidence** to add notes and optional files, linked to a requirement or kept as general evidence. A file can be downloaded or the evidence removed. Submission copy has its own save button and copy control.
 
-**Packet audit** flags missing materials, placeholder/local artifact links, missing official rule sources and requirements without linked evidence. It does not fetch URLs, authenticate evidence or certify eligibility. Audit findings are included in Markdown handoffs. A complete preparation checklist can still have audit findings.
+**Packet audit** flags missing materials, placeholder/local artifact links, missing official rule sources and requirements without linked evidence. Repository/video access checks record a manual note tied to the exact inspected URL and time. Changing that URL makes the earlier review stale. Old backups without reviews remain compatible. A current review is self-reported and does not authenticate the link or the person. It does not fetch URLs, authenticate evidence or certify eligibility. Audit findings are included in Markdown handoffs. A complete preparation checklist can still have audit findings.
 
 The overview lists unfinished requirements and missing repository, video and submission copy. The preparation checklist is complete only when these are present and every requirement is checked. This does not mean the packet is ready for real submission. Percentage measures checked requirements, not overall readiness or organizer acceptance. A project without requirements is never ready.
 
@@ -33,7 +35,7 @@ Submit through the organizer's real website yourself. In **Submit & record**, sa
 
 **Export JSON** backs up the entire desk, including file contents. **Import JSON** validates the whole file before asking to replace the desk; cancel leaves it unchanged. Export a backup before replacing. **Handoff .md** exports the selected entry, explicit deadline and UTC instant, requirements, unfinished work, links, copy, evidence notes and recorded receipt. Markdown lists attachment names; JSON carries their bytes.
 
-See [the 90-second demo](docs/DEMO.md) and [verification notes](docs/VERIFICATION.md).
+See [the recorded demo](demo/preview.html) and [walkthrough](docs/DEMO.md) and [verification notes](docs/VERIFICATION.md).
 
 ## Storage and limits
 
@@ -48,6 +50,12 @@ See [the 90-second demo](docs/DEMO.md) and [verification notes](docs/VERIFICATIO
 
 `domain.js`: validation, time conversion, readiness and handoff generation. `app.js`: UI and atomic local persistence. `style.css`: responsive interface. `server.mjs`: allowlisted static loopback server. `tests/domain.test.mjs`: regression tests.
 
-## Real cash-prize goal
+## Contest preparation
 
-See [the active contest goal](contest/GOAL.md) and [real entry preparation plan](contest/entry-plan.json). Build With AI: Basics is the provisional target, with a verified $1,250 first-place prize. Eligibility, required development workflow, video, publication and actual submission are still unfinished; the prototype and synthetic demo are not an entered competition project.
+Target: Build With AI: Basics, deadline October 26, 2026 at 5 p.m. Eastern; first prize $1,250. No prize is promised. The earlier prototype predates required Skill Pack use; planning and subsequent implementation chronology are disclosed in [WORKFLOW.md](docs/WORKFLOW.md). Required plans are under `devpost/`. The organizer determines eligibility.
+
+Public repository/video and entry are pending user approval. No publication or submission has occurred for Submission Desk. What Changed? is a separate submitted entry and is not reused as this product.
+
+## Verification tooling
+
+`node scripts/browser-check.mjs` and `node scripts/record-demo.mjs` use an existing Playwright package and installed Chrome. Set `PLAYWRIGHT_MODULE` to its absolute package directory. QA tooling is optional; app/tests have no package dependencies. Documentation of validation and limits: [VERIFICATION.md](docs/VERIFICATION.md).

@@ -1,16 +1,12 @@
-# A 90-second demo
+# Recorded demo
 
-This demo entry helps people reach a **financial goal: a $1,000 emergency fund**. No entry is sent to an organizer.
+Open `demo/preview.html` or play `demo/submission-desk-demo.webm`. This is actual browser footage, with a caption overlay added only in the recording context. All example entries, artifact-review notes and receipts are synthetic. No external artifact link is visited and no real entry is submitted in the video.
 
-1. **0:00 — Meet the desk.** Start the app and choose Gapwise. Its deadline is November 20, 2026 at 5 PM in `America/New_York`. Review the synthetic financial-goal entry and the two unfinished items.
-2. **0:15 — Prepare the entry.** Set the video to `https://example.com/gapwise/demo` and save. In Requirements, check the two-minute video requirement and save it. The entry is now ready, but actual submission is still **Not recorded**.
-3. **0:30 — Back it up with evidence.** In Evidence, add “Walkthrough duration checked,” note the 1:54 duration and savings milestones, choose the video requirement and attach `docs/demo-evidence.txt`. Save. Download the file to inspect it.
-4. **0:45 — Write the pitch.** Open Submission copy, edit the draft, save and use Copy saved text. The draft explains the $1,000 savings target, $250 starting balance and $50 weekly contribution.
-5. **1:00 — Record what happened.** In Submit & record, enter `https://example.com/confirmation/DEMO-GAPWISE-001` and a clearly synthetic receipt. Record submission. The two statuses now independently show **Ready to submit** and **Recorded manually**.
-6. **1:15 — Hand it off.** Export JSON and Handoff .md. Switch to Raincheck to see its independent work list. Import the JSON to restore the completed desk, including its evidence attachment and receipt. Refresh to confirm persistence.
+1. Complete a checklist while actual submission stays unrecorded.
+2. Packet audit exposes placeholder links and missing evidence.
+3. Record a synthetic manual access-check note for an exact URL.
+4. Edit that URL; the earlier review becomes stale.
+5. Attach a note to a requirement and export a Markdown handoff.
+6. Separately record a synthetic receipt, then switch to another entry.
 
-For an instant finished example, import [completed-demo.json](completed-demo.json). It preserves the completed browser workflow, updated for the financial-goal correction and re-imported through the tested UI. [Gapwise-handoff.md](Gapwise-handoff.md) is the matching Markdown handoff. Import replaces the current desk after confirmation, so back up your own entries first.
-
-![Completed workflow on desktop](desktop-demo.jpg)
-
-![Mobile overview](mobile-demo.jpg)
+Chapter timestamps are in demo/chapters.json. Metadata/playback verification is in docs/video-check.json. The earlier docs/completed-demo.json and Gapwise-handoff.md are legacy synthetic examples; imports without artifactReviews remain supported. They do not represent a real contest packet.

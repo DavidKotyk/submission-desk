@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-16T03:56:56.837Z",
+  "browser": "Chrome",
+  "checks": [
+    "Fresh synthetic desk loads",
+    "Completed checklist does not record submission",
+    "Populated placeholder artifacts still blocked",
+    "Placeholder artifact cannot be reviewed",
+    "Exact-URL review saved and current",
+    "URL edit invalidates review through refresh",
+    "Evidence text remains literal",
+    "Attachment download preserves bytes",
+    "Empty receipt rejected; manual receipt is separate",
+    "JSON retains exact reviewed URL",
+    "Markdown reports stale review and receipt",
+    "Multi-entry independence and JSON restore",
+    "Rejected import leaves storage unchanged",
+    "Mobile document has no horizontal overflow",
+    "No page errors or external requests"
+  ],
+  "errors": [],
+  "external": []
+}
