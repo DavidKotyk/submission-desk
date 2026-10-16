@@ -6,7 +6,7 @@ approval_basis: User explicitly requested this goal and delegated completion; no
 # Build checklist
 
 - [x] Baseline recorded and required Skill Pack read; plan subsequent increment. Existing prototype retained honestly.
-- [ ] Slice 1: artifact review state, schema validation, stale review audit/export; meaningful regression tests. Refs: prd.md > Artifact access review; spec.md > Domain and access checks. Commit: Add source-bound artifact access review.
+- [x] Slice 1: artifact review state, schema validation, stale review audit/export; meaningful regression tests. Refs: prd.md > Artifact access review; spec.md > Domain and access checks. Commit: Add source-bound artifact access review.
 - [ ] Slice 2: end-to-end review forms and readable statuses; browser verify existing full workflow plus invalidation/mobile. Refs: prd.md > Core Journey; spec.md > Browser UI and storage. Commit: Verify submission evidence workflow.
 - [ ] Slice 3: real app recording, README/license, clean clone checks, source/history audit and factual submission packet. Refs: scope.md > What Working Looks Like. Commit: Prepare contest demo and submission package.
 

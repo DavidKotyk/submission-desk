@@ -26,6 +26,10 @@ export function validate(data){
  if(!Array.isArray(p.requirements)||p.requirements.length>200||!Array.isArray(p.evidence)||p.evidence.length>200)fail();
  const rids=new Set();for(const r of p.requirements){if(!r||!validId(r.id)||rids.has(r.id)||!str(r.title)||!r.title.trim()||!str(r.source)||!safeURL(r.source)||typeof r.done!=='boolean')fail();rids.add(r.id);}
  const eids=new Set();for(const e of p.evidence){if(!e||!validId(e.id)||eids.has(e.id)||!str(e.title)||!str(e.note)||!str(e.requirementId)||e.requirementId&&!rids.has(e.requirementId))fail();eids.add(e.id);if(e.file!==null){if(!e.file||!str(e.file.name,255)||!str(e.file.data,1400000)||!/^data:application\/octet-stream;base64,[A-Za-z0-9+/]*={0,2}$/.test(e.file.data))fail();}}
+ if(p.artifactReviews!==undefined){
+  if(!p.artifactReviews||typeof p.artifactReviews!=='object'||Array.isArray(p.artifactReviews))fail();
+  for(const [key,r] of Object.entries(p.artifactReviews))if(!['repo','video'].includes(key)||!r||!str(r.url)||!r.url||!safeURL(r.url)||placeholderURL(r.url)||!str(r.note,2000)||!r.note.trim()||!str(r.checkedAt)||!/^\d{4}-\d\d-\d\dT/.test(r.checkedAt)||!Number.isFinite(Date.parse(r.checkedAt)))fail();
+ }
  if(p.submission!==null){const s=p.submission;if(!s||!str(s.receipt)||!str(s.link)||!safeURL(s.link)||!str(s.recordedAt)||!Number.isFinite(Date.parse(s.recordedAt))||!(s.receipt.trim()||s.link))fail();}
  }return data;
 }
@@ -33,12 +37,21 @@ export function placeholderURL(value){
  if(!value)return false;
  try{const h=new URL(value).hostname.toLowerCase();return /(^|\.)(example\.(com|net|org)|localhost)$/.test(h)||/\.(test|invalid|example)$/.test(h)||h==='127.0.0.1'||h==='[::1]';}catch{return false;}
 }
+export function artifactReviewStatus(p,key){const r=p.artifactReviews?.[key];return !r?'unreviewed':r.url===p[key]?'current':'stale';}
+export function reviewArtifact(p,key,note,checkedAt=new Date().toISOString()){
+ if(!['repo','video'].includes(key))throw Error('Unknown artifact.');
+ if(!p[key]||!safeURL(p[key])||placeholderURL(p[key]))throw Error('Save a real public artifact URL before recording a review.');
+ if(typeof note!=='string'||!note.trim()||note.length>2000)throw Error('Add a review note (up to 2,000 characters).');
+ if(!/^\d{4}-\d\d-\d\dT/.test(checkedAt)||!Number.isFinite(Date.parse(checkedAt)))throw Error('Invalid review time.');
+ p.artifactReviews??={};p.artifactReviews[key]={url:p[key],note:note.trim(),checkedAt};return p;
+}
 export function packetAudit(p){
  const findings=[];
  const add=(level,title,detail,target)=>findings.push({level,title,detail,target});
  for(const [key,name] of [['repo','Repository'],['video','Video']]){
   if(!p[key])add('blocker',name+' link is missing','Add the actual artifact URL before preparing a real entry.','Overview');
   else if(placeholderURL(p[key]))add('blocker',name+' uses a placeholder or local URL','This address cannot serve as a public submission artifact.','Overview');
+  else if(artifactReviewStatus(p,key)!=='current')add('review',name+' access review is '+artifactReviewStatus(p,key),artifactReviewStatus(p,key)==='stale'?'The saved review covers a different URL. Inspect the current link and record a new note.':'Open the saved link, inspect access and content, then record what you checked.','Packet audit');
  }
  if(!p.copy.trim())add('blocker','Submission copy is missing','Write a description of the product that actually works.','Submission copy');
  if(!p.requirements.length)add('blocker','No event requirements recorded','Read the official rules and record their requirements.','Requirements');
@@ -50,4 +63,4 @@ export function packetAudit(p){
  if(p.submission&&/\b(synthetic|demo)\b/i.test(p.submission.receipt+' '+p.submission.link))add('review','The receipt appears to be demo data','This text matches a demo marker. Only a real organizer confirmation can document an actual entry.','Submit & record');
  return findings;
 }
-export function markdown(p){return `# ${p.name}\n\n${p.event}\n\n${p.summary}\n\n## Deadline\n${p.deadlineLocal} [${p.timeZone}] / ${deadlineISO(p.deadlineLocal,p.timeZone)}\n\n## Preparation\n${unfinished(p).length?'Work remains':'Checklist complete; inspect the packet audit before submission'}\n\n## Requirements\n${p.requirements.map(r=>`- [${r.done?'x':' '}] ${r.title}${r.source?' — '+r.source:''}`).join('\n')}\n\n## Unfinished work\n${unfinished(p).map(x=>'- '+x).join('\n')||'None'}\n\n## Links\nRepository: ${p.repo||'Missing'}\nVideo: ${p.video||'Missing'}\n\n## Submission copy\n${p.copy}\n\n## Evidence\n${p.evidence.map(e=>`### ${e.title}\n${e.note}\nRequirement: ${p.requirements.find(r=>r.id===e.requirementId)?.title||'General'}\n${e.file?'Attachment: '+e.file.name+' (included in JSON backup, not embedded here)':''}`).join('\n\n')}\n\n## Packet audit\n${packetAudit(p).map(f=>`- [${f.level.toUpperCase()}] ${f.title}: ${f.detail}`).join('\n')||'No local completeness gaps detected.'}\n\nThese are local checks only. URLs are not fetched, evidence is not authenticated, and event eligibility is not certified.\n\n## Actual submission\n${p.submission?`Manually recorded: ${p.submission.recordedAt}\nConfirmation: ${p.submission.link}\nReceipt: ${p.submission.receipt}`:'Not recorded. Preparation does not mean submitted.'}\n`;}
+export function markdown(p){return `# ${p.name}\n\n${p.event}\n\n${p.summary}\n\n## Deadline\n${p.deadlineLocal} [${p.timeZone}] / ${deadlineISO(p.deadlineLocal,p.timeZone)}\n\n## Preparation\n${unfinished(p).length?'Work remains':'Checklist complete; inspect the packet audit before submission'}\n\n## Requirements\n${p.requirements.map(r=>`- [${r.done?'x':' '}] ${r.title}${r.source?' — '+r.source:''}`).join('\n')}\n\n## Unfinished work\n${unfinished(p).map(x=>'- '+x).join('\n')||'None'}\n\n## Links\nRepository: ${p.repo||'Missing'}\nVideo: ${p.video||'Missing'}\n\n## Submission copy\n${p.copy}\n\n## Evidence\n${p.evidence.map(e=>`### ${e.title}\n${e.note}\nRequirement: ${p.requirements.find(r=>r.id===e.requirementId)?.title||'General'}\n${e.file?'Attachment: '+e.file.name+' (included in JSON backup, not embedded here)':''}`).join('\n\n')}\n\n## Packet audit\n${packetAudit(p).map(f=>`- [${f.level.toUpperCase()}] ${f.title}: ${f.detail}`).join('\n')||'No local completeness gaps detected.'}\n\nThese are local checks only. URLs are not fetched, evidence is not authenticated, and event eligibility is not certified.\n\n## Artifact access reviews\n${['repo','video'].map(key=>{const r=p.artifactReviews?.[key];return `### ${key}: ${artifactReviewStatus(p,key)}\n${r?`Reviewed URL: ${r.url}\nChecked at: ${r.checkedAt}\nNote: ${r.note}`:'No manual review recorded.'}`;}).join('\n\n')}\n\nManual records are self-reported, not automated verification.\n\n## Actual submission\n${p.submission?`Manually recorded: ${p.submission.recordedAt}\nConfirmation: ${p.submission.link}\nReceipt: ${p.submission.receipt}`:'Not recorded. Preparation does not mean submitted.'}\n`;}
