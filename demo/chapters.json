@@ -1,0 +1,47 @@
+[
+  {
+    "seconds": 0.144,
+    "title": "Submission Desk",
+    "body": "A local workspace for hackathon entries. The examples are synthetic; the desk does not submit anything."
+  },
+  {
+    "seconds": 9.383,
+    "title": "1 · A complete checklist",
+    "body": "Every requirement is checked. That still does not mean the packet is ready—or that an entry was submitted."
+  },
+  {
+    "seconds": 18.398,
+    "title": "2 · Inspect the gaps",
+    "body": "Five blockers remain: filled-in placeholder links are not public artifacts. Missing evidence also stays visible."
+  },
+  {
+    "seconds": 28.608,
+    "title": "3 · Record what was inspected",
+    "body": "Manual review notes remember an exact URL and time. This demo note is synthetic; the app does not fetch or authenticate links."
+  },
+  {
+    "seconds": 38.697,
+    "title": "4 · Catch stale evidence",
+    "body": "The repository URL changed. The earlier review is now stale and cannot cover the new link."
+  },
+  {
+    "seconds": 48.747,
+    "title": "5 · Link evidence to requirements",
+    "body": "Notes and optional files belong beside the rule they support. JSON backups preserve attachments; Markdown creates a portable handoff."
+  },
+  {
+    "seconds": 58.793,
+    "title": "6 · Prepared and submitted stay separate",
+    "body": "Actual submission is still not recorded. The user submits on the organizer’s website and can then save a receipt."
+  },
+  {
+    "seconds": 67.826,
+    "title": "7 · A manual record",
+    "body": "The receipt is a separate, self-reported fact. It does not certify acceptance or erase packet gaps."
+  },
+  {
+    "seconds": 76.844,
+    "title": "One desk, several entries",
+    "body": "Independent deadlines and unfinished work. Local storage, no account connection, explicit limits and honest status."
+  }
+]

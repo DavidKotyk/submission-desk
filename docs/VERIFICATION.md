@@ -9,6 +9,10 @@
 
 These checks establish behavior on controlled, assistant-authored fixtures. They do not establish real-user time savings, independent semantic accuracy, organizer acceptance, legal eligibility, novelty or a prize probability. See docs/LIMITATIONS.md.
 
+## Recorded demo
+
+Actual 90.68-second captioned local-app video, 1440×960, full playback verified at 4× with no decode error. See docs/video-check.json. Screen captures at 25/48/72 seconds show the audit, stale-review finding and separate synthetic receipt.
+
 ## Prior prototype verification (historical)
 
 # Verification — 2026-10-15
