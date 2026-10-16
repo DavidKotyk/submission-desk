@@ -7,9 +7,12 @@
   "videoPublished": true,
   "contestSubmitted": false,
   "chronologyDisclosed": true,
-  "updatedAt": "2026-10-16T04:03:11.660113+00:00",
+  "updatedAt": "2026-10-16T04:05:30.368894+00:00",
   "repositoryUnauthenticatedCloneVerified": true,
   "videoStatus": "YouTube Studio confirmed Video published, Oct 16, 2026, duration 1:31.",
   "unauthenticatedPlaybackVerified": true,
-  "videoVerification": "Incognito displayed Sign in and correct title; playback at 0:02 of 1:30."
+  "videoVerification": "Incognito displayed Sign in and correct title; playback at 0:02 of 1:30.",
+  "devpostProjectUrl": "https://devpost.com/software/submission-desk",
+  "devpostSubmissionId": 1239863,
+  "devpostStatus": "Draft 4/5 steps complete; overview/story/links/thumbnail and confirmed personal survey saved. Final terms/submission not yet authorized."
 }
